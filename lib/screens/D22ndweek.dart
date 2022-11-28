@@ -6,7 +6,7 @@ import 'package:befit/screens/superman.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/screens/panel.dart';
 import 'package:befit/standards.dart';
-import 'package:befit/D23rdweek.dart';
+import 'package:befit/screens/D23rdweek.dart';
 
 class D22ndweek extends StatefulWidget {
   @override
@@ -189,7 +189,7 @@ class _D22ndweekState extends State<D22ndweek> {
                   children: [
                     Container(
                       width: deviceWidth,
-                      height: 200,
+                      height: 150,
                       alignment: Alignment.bottomCenter,
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
@@ -205,7 +205,7 @@ class _D22ndweekState extends State<D22ndweek> {
                         children: [
                           SizedBox(
                             width: 110,
-                            height: 170,
+                            height: 130,
                             child: Image(
                               image: AssetImage("assets/images/pushups.jpg"),
                               height: 95,

@@ -6,7 +6,7 @@ import 'package:befit/screens/superman.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/screens/panel.dart';
 import 'package:befit/standards.dart';
-import 'package:befit/E23rdweek.dart';
+import 'package:befit/screens/E23rdweek.dart';
 
 class E22ndweek extends StatefulWidget {
   @override

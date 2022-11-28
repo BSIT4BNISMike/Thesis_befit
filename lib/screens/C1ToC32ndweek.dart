@@ -6,7 +6,7 @@ import 'package:befit/screens/superman.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/screens/panel.dart';
 import 'package:befit/standards.dart';
-import 'package:befit/C1Toc33rdweek.dart';
+import 'package:befit/screens/C1Toc33rdweek.dart';
 
 class C1toC32nd extends StatefulWidget {
   @override

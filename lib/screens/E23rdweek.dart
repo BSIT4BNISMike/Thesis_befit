@@ -1,7 +1,6 @@
 import 'package:befit/screens/Congratulations.dart';
 import 'package:befit/screens/cobraPose.dart';
 import 'package:befit/screens/extension.dart';
-import 'package:befit/screens/jumpingJacks.dart';
 import 'package:befit/screens/kneeToChest.dart';
 import 'package:befit/screens/planks.dart';
 import 'package:befit/screens/prisonerSquats.dart';

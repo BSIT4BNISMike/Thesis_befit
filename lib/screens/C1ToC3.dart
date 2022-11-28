@@ -4,8 +4,7 @@ import 'package:befit/screens/superman.dart';
 import 'package:befit/screens/wallSquats.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
-import 'package:befit/B1ToB32ndweek.dart';
-import 'package:befit/C1ToC32ndweek.dart';
+import 'package:befit/screens/C1ToC32ndweek.dart';
 
 class A3 extends StatefulWidget {
   const A3({Key? key}) : super(key: key);

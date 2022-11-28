@@ -1,7 +1,7 @@
 import 'package:befit/screens/Congratulations.dart';
 import 'package:befit/screens/kneeToChest.dart';
+import 'package:befit/screens/prisonerSquats.dart';
 import 'package:befit/screens/walking.dart';
-import 'package:befit/screens/wallSquats.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/screens/panel.dart';
 import 'package:befit/standards.dart';
@@ -318,7 +318,7 @@ class _A1toA33rdState extends State<A1toA33rd> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => WallSquats(),
+                                    builder: (context) => PrisonerSquats(),
                                   ),
                                 );
                               },

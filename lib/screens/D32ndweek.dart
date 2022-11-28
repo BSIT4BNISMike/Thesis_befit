@@ -8,7 +8,7 @@ import 'package:befit/screens/tricepDips.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/screens/panel.dart';
 import 'package:befit/standards.dart';
-import 'package:befit/D33rdweek.dart';
+import 'package:befit/screens/D33rdweek.dart';
 
 class D32ndweek extends StatefulWidget {
   @override
