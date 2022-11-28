@@ -8,7 +8,6 @@ import 'package:befit/screens/pushUps.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/screens/panel.dart';
 import 'package:befit/standards.dart';
-import 'package:befit/B1ToB33rdweek.dart';
 
 class D12ndweek extends StatefulWidget {
   @override

@@ -1,15 +1,12 @@
 import 'package:befit/screens/Congratulations.dart';
 import 'package:befit/screens/extension.dart';
 import 'package:befit/screens/jumpingJacks.dart';
-import 'package:befit/screens/kneeToChest.dart';
 import 'package:befit/screens/mountainClimbers.dart';
 import 'package:befit/screens/planks.dart';
 import 'package:befit/screens/prisonerSquats.dart';
 import 'package:befit/screens/pushUps.dart';
 import 'package:befit/screens/russianTwist.dart';
-import 'package:befit/screens/sideLunges.dart';
 import 'package:flutter/material.dart';
-import 'package:befit/screens/panel.dart';
 import 'package:befit/standards.dart';
 
 class D33rdweek extends StatefulWidget {
@@ -116,7 +113,7 @@ class _D33rdweekState extends State<D33rdweek> {
                         color: Standards.colors["primaryColorLight"]),
                     Container(
                       width: deviceWidth,
-                      height: 200,
+                      height: 150,
                       alignment: Alignment.bottomCenter,
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
@@ -132,7 +129,7 @@ class _D33rdweekState extends State<D33rdweek> {
                         children: [
                           SizedBox(
                             width: 110,
-                            height: 170,
+                            height: 130,
                             child: Image(
                               image: AssetImage(
                                   "assets/images/mountainclimbers.jpg"),
@@ -552,7 +549,7 @@ class _D33rdweekState extends State<D33rdweek> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Planks(),
+                                    builder: (context) => PushUps(),
                                   ),
                                 );
                               },

@@ -293,7 +293,7 @@ class _D13rdweekState extends State<D13rdweek> {
                             width: 115,
                             alignment: Alignment.center,
                             child: Text(
-                              'Extensions repeat 15 times for 3 sets',
+                              'Extensions repeat exercise 15 times for 3 sets',
                               style: Standards.fontStyles["mainWhite"],
                             ),
                           ),

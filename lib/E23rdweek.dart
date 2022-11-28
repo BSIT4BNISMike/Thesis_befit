@@ -1,21 +1,22 @@
-import 'package:befit/screens/BicycleCrunch.dart';
+import 'package:befit/screens/Congratulations.dart';
 import 'package:befit/screens/cobraPose.dart';
+import 'package:befit/screens/extension.dart';
 import 'package:befit/screens/jumpingJacks.dart';
-import 'package:befit/screens/mountainClimbers.dart';
+import 'package:befit/screens/kneeToChest.dart';
+import 'package:befit/screens/planks.dart';
 import 'package:befit/screens/prisonerSquats.dart';
-import 'package:befit/screens/sideLunges.dart';
+import 'package:befit/screens/pushUps.dart';
+import 'package:befit/screens/russianTwist.dart';
 import 'package:flutter/material.dart';
+import 'package:befit/screens/panel.dart';
 import 'package:befit/standards.dart';
-import 'package:befit/screens/D32ndweek.dart';
 
-class A6 extends StatefulWidget {
-  const A6({Key? key}) : super(key: key);
-
+class E23rdweek extends StatefulWidget {
   @override
-  State<A6> createState() => _A6State();
+  State<E23rdweek> createState() => _E23rdweekState();
 }
 
-class _A6State extends State<A6> {
+class _E23rdweekState extends State<E23rdweek> {
   @override
   Widget build(BuildContext context) {
     final deviceWidth = MediaQuery.of(context).size.width;
@@ -88,7 +89,7 @@ class _A6State extends State<A6> {
                           height: 50,
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            'Initial Week',
+                            'After 3 Weeks',
                             style: Standards.fontStyles["smallerMain"],
                           ),
                         ),
@@ -101,246 +102,17 @@ class _A6State extends State<A6> {
                           height: 50,
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            'Number of Exercises: 5',
+                            'Number of Exercises: 7',
                             style: Standards.fontStyles["smallerMain"],
                           ),
                         ),
                       ],
                     ),
+// Exercise 1
                     Divider(
                         height: 18,
                         thickness: 5,
                         color: Standards.colors["primaryColorLight"]),
-// Exercise 1
-                    Container(
-                      width: deviceWidth,
-                      height: 150,
-                      alignment: Alignment.bottomCenter,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 252, 116, 190),
-                            Color.fromARGB(255, 202, 36, 180),
-                          ],
-                        ),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          SizedBox(
-                            width: 110,
-                            height: 130,
-                            child: Image(
-                              image: AssetImage(
-                                  "assets/images/mountainclimbers.jpg"),
-                              height: 95,
-                              width: 95,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          Container(
-                            width: 115,
-                            alignment: Alignment.center,
-                            child: Text(
-                              'Mountain climbers perform exercise for 1 minute',
-                              style: Standards.fontStyles["mainWhite"],
-                            ),
-                          ),
-                          Container(
-                            width: 50,
-                            height: 45,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                colors: [
-                                  Color.fromARGB(255, 252, 116, 190),
-                                  Color.fromARGB(255, 202, 36, 180),
-                                ],
-                                stops: [1.0, 1.0],
-                              ),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: IconButton(
-                              icon: Icon(
-                                Icons.arrow_forward,
-                                color: Standards.colors["whiteColor"],
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => MountainClimbers(),
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                Divider(
-                    height: 18,
-                    thickness: 5,
-                    color: Standards.colors["primaryColorLight"]),
-
-                // Exercise 2
-                Column(
-                  children: [
-                    Container(
-                      width: deviceWidth,
-                      height: 150,
-                      alignment: Alignment.bottomCenter,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 252, 116, 190),
-                            Color.fromARGB(255, 202, 36, 180),
-                          ],
-                        ),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          SizedBox(
-                            width: 110,
-                            height: 130,
-                            child: Image(
-                              image:
-                                  AssetImage("assets/images/jumpingjacks.jpg"),
-                              height: 95,
-                              width: 95,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          Container(
-                            width: 115,
-                            alignment: Alignment.center,
-                            child: Text(
-                              'Jumping jacks perform exercise for 1 minute',
-                              style: Standards.fontStyles["mainWhite"],
-                            ),
-                          ),
-                          Container(
-                            width: 50,
-                            height: 45,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                colors: [
-                                  Color.fromARGB(255, 252, 116, 190),
-                                  Color.fromARGB(255, 202, 36, 180),
-                                ],
-                                stops: [1.0, 1.0],
-                              ),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: IconButton(
-                              icon: Icon(
-                                Icons.arrow_forward,
-                                color: Standards.colors["whiteColor"],
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => JumpingJacks(),
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                Divider(
-                    height: 18,
-                    thickness: 5,
-                    color: Standards.colors["primaryColorLight"]),
-// Exercise 3
-                Column(
-                  children: [
-                    Container(
-                      width: deviceWidth,
-                      height: 200,
-                      alignment: Alignment.bottomCenter,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 252, 116, 190),
-                            Color.fromARGB(255, 202, 36, 180),
-                          ],
-                        ),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          SizedBox(
-                            width: 110,
-                            height: 170,
-                            child: Image(
-                              image:
-                                  AssetImage("assets/images/bicyclecrunch.jpg"),
-                              height: 95,
-                              width: 95,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          Container(
-                            width: 115,
-                            alignment: Alignment.center,
-                            child: Text(
-                              'Bicycle crunch repeat exercise 15 times for 3 sets',
-                              style: Standards.fontStyles["mainWhite"],
-                            ),
-                          ),
-                          Container(
-                            width: 50,
-                            height: 45,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              gradient: const LinearGradient(
-                                colors: [
-                                  Color.fromARGB(255, 252, 116, 190),
-                                  Color.fromARGB(255, 202, 36, 180),
-                                ],
-                                stops: [1.0, 1.0],
-                              ),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: IconButton(
-                              icon: Icon(
-                                Icons.arrow_forward,
-                                color: Standards.colors["whiteColor"],
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => BicycleCrunch(),
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                Divider(
-                    height: 18,
-                    thickness: 5,
-                    color: Standards.colors["primaryColorLight"]),
-                // Exercise 4
-                Column(
-                  children: [
                     Container(
                       width: deviceWidth,
                       height: 200,
@@ -372,7 +144,7 @@ class _A6State extends State<A6> {
                             width: 115,
                             alignment: Alignment.center,
                             child: Text(
-                              'Prisoner squats repeat exercise 15 times for 3 sets',
+                              'Prisoner squats repeat exercise 20 times for 3 sets',
                               style: Standards.fontStyles["mainWhite"],
                             ),
                           ),
@@ -414,7 +186,8 @@ class _A6State extends State<A6> {
                     height: 18,
                     thickness: 5,
                     color: Standards.colors["primaryColorLight"]),
-                // Exercise 5
+
+// Exercise 2
                 Column(
                   children: [
                     Container(
@@ -437,7 +210,8 @@ class _A6State extends State<A6> {
                             width: 110,
                             height: 130,
                             child: Image(
-                              image: AssetImage("assets/images/sidelunges.jpg"),
+                              image:
+                                  AssetImage("assets/images/russiantwist.jpg"),
                               height: 95,
                               width: 95,
                               fit: BoxFit.fill,
@@ -447,7 +221,7 @@ class _A6State extends State<A6> {
                             width: 115,
                             alignment: Alignment.center,
                             child: Text(
-                              'Side lunges repeat exercise 3 times',
+                              'Russian twist repeat exercise 20 times for 3 sets',
                               style: Standards.fontStyles["mainWhite"],
                             ),
                           ),
@@ -474,7 +248,7 @@ class _A6State extends State<A6> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => SideLunges(),
+                                    builder: (context) => RussianTwist(),
                                   ),
                                 );
                               },
@@ -485,6 +259,388 @@ class _A6State extends State<A6> {
                     ),
                   ],
                 ),
+                Divider(
+                    height: 18,
+                    thickness: 5,
+                    color: Standards.colors["primaryColorLight"]),
+// Exercise 3
+                Column(
+                  children: [
+                    Container(
+                      width: deviceWidth,
+                      height: 150,
+                      alignment: Alignment.bottomCenter,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 252, 116, 190),
+                            Color.fromARGB(255, 202, 36, 180),
+                          ],
+                        ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SizedBox(
+                            width: 110,
+                            height: 130,
+                            child: Image(
+                              image: AssetImage("assets/images/pushups.jpg"),
+                              height: 95,
+                              width: 95,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          Container(
+                            width: 115,
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Push ups repeat 20 times for 3 sets',
+                              style: Standards.fontStyles["mainWhite"],
+                            ),
+                          ),
+                          Container(
+                            width: 50,
+                            height: 45,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 252, 116, 190),
+                                  Color.fromARGB(255, 202, 36, 180),
+                                ],
+                                stops: [1.0, 1.0],
+                              ),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: IconButton(
+                              icon: Icon(
+                                Icons.arrow_forward,
+                                color: Standards.colors["whiteColor"],
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => PushUps(),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Divider(
+                    height: 18,
+                    thickness: 5,
+                    color: Standards.colors["primaryColorLight"]),
+// Exercise 4
+                Column(
+                  children: [
+                    Container(
+                      width: deviceWidth,
+                      height: 150,
+                      alignment: Alignment.bottomCenter,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 252, 116, 190),
+                            Color.fromARGB(255, 202, 36, 180),
+                          ],
+                        ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SizedBox(
+                            width: 110,
+                            height: 130,
+                            child: Image(
+                              image: AssetImage("assets/images/extension.jpg"),
+                              height: 95,
+                              width: 95,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          Container(
+                            width: 115,
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Extensions repeat exercise 20 times for 3 sets',
+                              style: Standards.fontStyles["mainWhite"],
+                            ),
+                          ),
+                          Container(
+                            width: 50,
+                            height: 45,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 252, 116, 190),
+                                  Color.fromARGB(255, 202, 36, 180),
+                                ],
+                                stops: [1.0, 1.0],
+                              ),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: IconButton(
+                              icon: Icon(
+                                Icons.arrow_forward,
+                                color: Standards.colors["whiteColor"],
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Extension(),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                //
+//Exercise 5
+                Divider(
+                    height: 18,
+                    thickness: 5,
+                    color: Standards.colors["primaryColorLight"]),
+                Column(
+                  children: [
+                    Container(
+                      width: deviceWidth,
+                      height: 150,
+                      alignment: Alignment.bottomCenter,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 252, 116, 190),
+                            Color.fromARGB(255, 202, 36, 180),
+                          ],
+                        ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SizedBox(
+                            width: 110,
+                            height: 130,
+                            child: Image(
+                              image: AssetImage("assets/images/plank.jpg"),
+                              height: 95,
+                              width: 95,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          Container(
+                            width: 115,
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Plank repeat exercise 3 times',
+                              style: Standards.fontStyles["mainWhite"],
+                            ),
+                          ),
+                          Container(
+                            width: 50,
+                            height: 45,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 252, 116, 190),
+                                  Color.fromARGB(255, 202, 36, 180),
+                                ],
+                                stops: [1.0, 1.0],
+                              ),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: IconButton(
+                              icon: Icon(
+                                Icons.arrow_forward,
+                                color: Standards.colors["whiteColor"],
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Planks(),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Divider(
+                    height: 18,
+                    thickness: 5,
+                    color: Standards.colors["primaryColorLight"]),
+// Exercise 6
+                Column(
+                  children: [
+                    Container(
+                      width: deviceWidth,
+                      height: 150,
+                      alignment: Alignment.bottomCenter,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 252, 116, 190),
+                            Color.fromARGB(255, 202, 36, 180),
+                          ],
+                        ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SizedBox(
+                            width: 110,
+                            height: 130,
+                            child: Image(
+                              image:
+                                  AssetImage("assets/images/kneetochest.jpg"),
+                              height: 95,
+                              width: 95,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          Container(
+                            width: 115,
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Knee to chest repeat exercise 3 times',
+                              style: Standards.fontStyles["mainWhite"],
+                            ),
+                          ),
+                          Container(
+                            width: 50,
+                            height: 45,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 252, 116, 190),
+                                  Color.fromARGB(255, 202, 36, 180),
+                                ],
+                                stops: [1.0, 1.0],
+                              ),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: IconButton(
+                              icon: Icon(
+                                Icons.arrow_forward,
+                                color: Standards.colors["whiteColor"],
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => KneeToChest(),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Divider(
+                    height: 18,
+                    thickness: 5,
+                    color: Standards.colors["primaryColorLight"]),
+                // Exercise 7
+                Column(
+                  children: [
+                    Container(
+                      width: deviceWidth,
+                      height: 150,
+                      alignment: Alignment.bottomCenter,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 252, 116, 190),
+                            Color.fromARGB(255, 202, 36, 180),
+                          ],
+                        ),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SizedBox(
+                            width: 110,
+                            height: 130,
+                            child: Image(
+                              image: AssetImage("assets/images/cobrapose.jpg"),
+                              height: 95,
+                              width: 95,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          Container(
+                            width: 115,
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Cobra pose repeat exercise 3 times',
+                              style: Standards.fontStyles["mainWhite"],
+                            ),
+                          ),
+                          Container(
+                            width: 50,
+                            height: 45,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 252, 116, 190),
+                                  Color.fromARGB(255, 202, 36, 180),
+                                ],
+                                stops: [1.0, 1.0],
+                              ),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: IconButton(
+                              icon: Icon(
+                                Icons.arrow_forward,
+                                color: Standards.colors["whiteColor"],
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => CobraPose(),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Divider(
+                    height: 18,
+                    thickness: 5,
+                    color: Standards.colors["primaryColorLight"]),
+
                 Container(
                   width: MediaQuery.of(context).size.width * 0.90,
                   margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
@@ -519,7 +675,7 @@ class _A6State extends State<A6> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => D32ndweek(),
+                              builder: (context) => Congrats(),
                             ),
                           );
                         },
