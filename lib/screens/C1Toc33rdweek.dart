@@ -54,8 +54,8 @@ class _C1toC33rdState extends State<C1toC33rd> {
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [
-                        Color(0xFF996BEF),
-                        Color.fromARGB(255, 166, 36, 202),
+                        Color.fromARGB(255, 204, 144, 236),
+                        Color.fromARGB(255, 153, 110, 180),
                       ],
                     ),
                     borderRadius: BorderRadius.circular(15),
@@ -118,8 +118,8 @@ class _C1toC33rdState extends State<C1toC33rd> {
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
-                            Color.fromARGB(255, 252, 116, 190),
-                            Color.fromARGB(255, 202, 36, 180),
+                            Color.fromARGB(255, 204, 144, 236),
+                            Color.fromARGB(255, 153, 110, 180),
                           ],
                         ),
                         borderRadius: BorderRadius.circular(15),
@@ -229,8 +229,8 @@ class _C1toC33rdState extends State<C1toC33rd> {
                             decoration: BoxDecoration(
                               gradient: const LinearGradient(
                                 colors: [
-                                  Color.fromARGB(255, 252, 116, 190),
-                                  Color.fromARGB(255, 202, 36, 180),
+                                  Color.fromARGB(255, 204, 144, 236),
+                                  Color.fromARGB(255, 153, 110, 180),
                                 ],
                                 stops: [1.0, 1.0],
                               ),
@@ -270,8 +270,8 @@ class _C1toC33rdState extends State<C1toC33rd> {
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
-                            Color.fromARGB(255, 252, 116, 190),
-                            Color.fromARGB(255, 202, 36, 180),
+                            Color.fromARGB(255, 204, 144, 236),
+                            Color.fromARGB(255, 153, 110, 180),
                           ],
                         ),
                         borderRadius: BorderRadius.circular(15),
@@ -382,8 +382,8 @@ class _C1toC33rdState extends State<C1toC33rd> {
                             decoration: BoxDecoration(
                               gradient: const LinearGradient(
                                 colors: [
-                                  Color.fromARGB(255, 252, 116, 190),
-                                  Color.fromARGB(255, 202, 36, 180),
+                                  Color.fromARGB(255, 204, 144, 236),
+                                  Color.fromARGB(255, 153, 110, 180),
                                 ],
                                 stops: [1.0, 1.0],
                               ),
@@ -423,8 +423,8 @@ class _C1toC33rdState extends State<C1toC33rd> {
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
-                            Color.fromARGB(255, 252, 116, 190),
-                            Color.fromARGB(255, 202, 36, 180),
+                            Color.fromARGB(255, 204, 144, 236),
+                            Color.fromARGB(255, 153, 110, 180),
                           ],
                         ),
                         borderRadius: BorderRadius.circular(15),
@@ -533,8 +533,8 @@ class _C1toC33rdState extends State<C1toC33rd> {
                             decoration: BoxDecoration(
                               gradient: const LinearGradient(
                                 colors: [
-                                  Color.fromARGB(255, 252, 116, 190),
-                                  Color.fromARGB(255, 202, 36, 180),
+                                  Color.fromARGB(255, 204, 144, 236),
+                                  Color.fromARGB(255, 153, 110, 180),
                                 ],
                                 stops: [1.0, 1.0],
                               ),

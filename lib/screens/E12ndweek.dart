@@ -1,9 +1,7 @@
 import 'package:befit/screens/BicycleCrunch.dart';
 import 'package:befit/screens/E13rdweek.dart';
 import 'package:befit/screens/cobraPose.dart';
-import 'package:befit/screens/extension.dart';
 import 'package:befit/screens/kneeToChest.dart';
-import 'package:befit/screens/planks.dart';
 import 'package:befit/screens/prisonerSquats.dart';
 import 'package:befit/screens/pushUps.dart';
 import 'package:befit/screens/superman.dart';
@@ -56,8 +54,8 @@ class _E12ndweekState extends State<E12ndweek> {
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [
-                        Color(0xFF996BEF),
-                        Color.fromARGB(255, 166, 36, 202),
+                        Color.fromARGB(255, 204, 144, 236),
+                        Color.fromARGB(255, 153, 110, 180),
                       ],
                     ),
                     borderRadius: BorderRadius.circular(15),
@@ -120,8 +118,8 @@ class _E12ndweekState extends State<E12ndweek> {
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
-                            Color.fromARGB(255, 252, 116, 190),
-                            Color.fromARGB(255, 202, 36, 180),
+                            Color.fromARGB(255, 204, 144, 236),
+                            Color.fromARGB(255, 153, 110, 180),
                           ],
                         ),
                         borderRadius: BorderRadius.circular(15),
@@ -232,8 +230,8 @@ class _E12ndweekState extends State<E12ndweek> {
                             decoration: BoxDecoration(
                               gradient: const LinearGradient(
                                 colors: [
-                                  Color.fromARGB(255, 252, 116, 190),
-                                  Color.fromARGB(255, 202, 36, 180),
+                                  Color.fromARGB(255, 204, 144, 236),
+                                  Color.fromARGB(255, 153, 110, 180),
                                 ],
                                 stops: [1.0, 1.0],
                               ),
@@ -273,8 +271,8 @@ class _E12ndweekState extends State<E12ndweek> {
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
-                            Color.fromARGB(255, 252, 116, 190),
-                            Color.fromARGB(255, 202, 36, 180),
+                            Color.fromARGB(255, 204, 144, 236),
+                            Color.fromARGB(255, 153, 110, 180),
                           ],
                         ),
                         borderRadius: BorderRadius.circular(15),
@@ -382,8 +380,8 @@ class _E12ndweekState extends State<E12ndweek> {
                             decoration: BoxDecoration(
                               gradient: const LinearGradient(
                                 colors: [
-                                  Color.fromARGB(255, 252, 116, 190),
-                                  Color.fromARGB(255, 202, 36, 180),
+                                  Color.fromARGB(255, 204, 144, 236),
+                                  Color.fromARGB(255, 153, 110, 180),
                                 ],
                                 stops: [1.0, 1.0],
                               ),
@@ -423,8 +421,8 @@ class _E12ndweekState extends State<E12ndweek> {
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
-                            Color.fromARGB(255, 252, 116, 190),
-                            Color.fromARGB(255, 202, 36, 180),
+                            Color.fromARGB(255, 204, 144, 236),
+                            Color.fromARGB(255, 153, 110, 180),
                           ],
                         ),
                         borderRadius: BorderRadius.circular(15),
@@ -533,8 +531,8 @@ class _E12ndweekState extends State<E12ndweek> {
                             decoration: BoxDecoration(
                               gradient: const LinearGradient(
                                 colors: [
-                                  Color.fromARGB(255, 252, 116, 190),
-                                  Color.fromARGB(255, 202, 36, 180),
+                                  Color.fromARGB(255, 204, 144, 236),
+                                  Color.fromARGB(255, 153, 110, 180),
                                 ],
                                 stops: [1.0, 1.0],
                               ),
