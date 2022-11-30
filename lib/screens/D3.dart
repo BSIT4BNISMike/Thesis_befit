@@ -44,7 +44,7 @@ class _A6State extends State<A6> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: const EdgeInsets.all(32),
+          padding: const EdgeInsets.all(15),
           child: SizedBox(
             child: Column(
               children: [

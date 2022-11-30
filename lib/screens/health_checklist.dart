@@ -112,6 +112,7 @@ class _HealthChecklistState extends State<HealthChecklist> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
+         
           children: [
             Text(
               'For each question, select the appropriate answer.',

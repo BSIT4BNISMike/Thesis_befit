@@ -41,7 +41,7 @@ class _A1toA32ndState extends State<A1toA32nd> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: const EdgeInsets.all(32),
+          padding: const EdgeInsets.all(15),
           child: SizedBox(
             child: Column(
               children: [
@@ -108,7 +108,7 @@ class _A1toA32ndState extends State<A1toA32nd> {
                         height: 18,
                         thickness: 5,
                         color: Standards.colors["primaryColorLight"]),
-// Exercise 1
+                 // Exercise 1
                     Container(
                       width: deviceWidth,
                       height: 150,
@@ -182,7 +182,7 @@ class _A1toA32ndState extends State<A1toA32nd> {
                     thickness: 5,
                     color: Standards.colors["primaryColorLight"]),
 
-                // Exercise 2
+               // Exercise 2
                 Column(
                   children: [
                     Container(
@@ -258,7 +258,7 @@ class _A1toA32ndState extends State<A1toA32nd> {
                     height: 18,
                     thickness: 5,
                     color: Standards.colors["primaryColorLight"]),
-// Exercise 3
+               // Exercise 3
                 Column(
                   children: [
                     Container(

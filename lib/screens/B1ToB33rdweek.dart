@@ -44,7 +44,7 @@ class _B1toB33rdState extends State<B1toB33rd> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: const EdgeInsets.all(32),
+          padding: const EdgeInsets.all(15),
           child: SizedBox(
             child: Column(
               children: [
@@ -77,7 +77,6 @@ class _B1toB33rdState extends State<B1toB33rd> {
                 ),
 
                 // Part 1
-
                 Column(
                   children: [
                     Row(

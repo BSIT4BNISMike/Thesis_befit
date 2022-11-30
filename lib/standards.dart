@@ -17,6 +17,7 @@ class Standards {
     "margin": 20.00,
     "padding": 16.00,
     "borderRadius": 10.00,
+    "minimargin": 10.00,
   };
 
   // Fonts
@@ -33,6 +34,11 @@ class Standards {
     ),
     "mainWhite": GoogleFonts.poppins(
       fontSize: 18.00,
+      fontWeight: FontWeight.bold,
+      color: colors["whiteColor"],
+    ),
+    "miniWhite": GoogleFonts.poppins(
+      fontSize: 20.00,
       fontWeight: FontWeight.bold,
       color: colors["whiteColor"],
     ),

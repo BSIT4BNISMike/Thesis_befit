@@ -44,7 +44,7 @@ class _A8State extends State<A8> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: const EdgeInsets.all(32),
+          padding: const EdgeInsets.all(15),
           child: SizedBox(
             child: Column(
               children: [
