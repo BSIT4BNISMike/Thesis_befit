@@ -145,7 +145,8 @@ class _WalkingState extends State<Walking> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Walking";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

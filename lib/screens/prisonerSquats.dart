@@ -203,7 +203,8 @@ class _PrisonerSquatsState extends State<PrisonerSquats> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Prisoner Squats";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

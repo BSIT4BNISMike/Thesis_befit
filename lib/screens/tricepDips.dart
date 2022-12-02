@@ -193,7 +193,8 @@ class _TricepDipsState extends State<TricepDips> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Tricep Dips";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

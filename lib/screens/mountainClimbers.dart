@@ -203,7 +203,8 @@ class _MountainClimbersState extends State<MountainClimbers> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Mountain Climbers";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

@@ -193,7 +193,8 @@ class _WallSquatsState extends State<WallSquats> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Wall Squats";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

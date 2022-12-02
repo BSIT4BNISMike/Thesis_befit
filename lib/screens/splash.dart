@@ -1,6 +1,6 @@
+import 'package:befit/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
-import 'package:befit/screens/sign_up.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Splash extends StatefulWidget {
@@ -70,7 +70,7 @@ class _SplashState extends State<Splash> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SignUp(),
+                    builder: (context) => Login(),
                   ),
                 );
               },

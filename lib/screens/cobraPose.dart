@@ -213,7 +213,8 @@ class _CobraPoseState extends State<CobraPose> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Cobra pose";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

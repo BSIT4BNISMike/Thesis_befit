@@ -203,7 +203,8 @@ class _PushUpsState extends State<PushUps> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Push ups";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

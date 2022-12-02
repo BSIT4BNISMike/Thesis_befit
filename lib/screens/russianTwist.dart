@@ -193,7 +193,8 @@ class _RussianTwistState extends State<RussianTwist> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Russian Twist";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

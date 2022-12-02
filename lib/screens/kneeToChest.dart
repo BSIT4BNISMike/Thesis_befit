@@ -213,7 +213,8 @@ class _KneeToChestState extends State<KneeToChest> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Knee to Chest";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

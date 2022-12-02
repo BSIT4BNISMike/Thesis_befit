@@ -223,7 +223,8 @@ class _BicycleCrunchState extends State<BicycleCrunch> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Bicycle Crunch";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

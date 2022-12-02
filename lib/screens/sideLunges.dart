@@ -213,7 +213,8 @@ class _SideLungesState extends State<SideLunges> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Side lunges";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

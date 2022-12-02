@@ -193,7 +193,8 @@ class _ExtensionState extends State<Extension> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Extensions";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

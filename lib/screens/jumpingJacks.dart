@@ -203,7 +203,8 @@ class _JumpingJacksState extends State<JumpingJacks> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Jumping jacks";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

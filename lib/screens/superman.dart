@@ -203,7 +203,8 @@ class _SupermanState extends State<Superman> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Superman";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),

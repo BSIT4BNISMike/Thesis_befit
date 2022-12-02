@@ -1,7 +1,12 @@
 import 'package:befit/screens/bmi_calculator.dart';
+import 'package:befit/screens/sign_up.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:befit/standards.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:befit/screens/resetpassword.dart';
+import 'package:befit/reusable widget/reusable_widgets.dart';
+import 'package:befit/standards.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -11,180 +16,204 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  String username = '';
-  String password = '';
+  TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _emailTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    // Hey there
-    // Welcome back
-    // Username field
-    // Password field
-    // Forgot your password?
-    // Login button
     return Scaffold(
-      appBar: null,
       body: Center(
         child: Container(
           margin: EdgeInsets.all(Standards.bounds["margin"]!),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text(
-                'Hey there',
-                style: Standards.fontStyles["subtitle"],
-                textAlign: TextAlign.center,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: SingleChildScrollView(
+              child: Column(children: [
+            Text(
+              'Hey There',
+              style: Standards.fontStyles["subtitle"],
+              textAlign: TextAlign.center,
+            ),
+            Text(
+              'Welcome back',
+              style: Standards.fontStyles["main"],
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              width: 230,
+              height: 200,
+              child: Image(
+                image: AssetImage("assets/images/Logo1.png"),
+                fit: BoxFit.fill,
               ),
-              Text(
-                'Welcome back',
-                style: Standards.fontStyles["main"],
-                textAlign: TextAlign.center,
-              ),
-              Container(
-                margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
-                child: TextField(
-                  // Icon
-                  decoration: InputDecoration(
-                    hintText: 'Username or Email',
-                    hintStyle: Standards.fontStyles["subtitle"],
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(
-                          Standards.bounds["borderRadius"]!),
-                    ),
-                    prefixIcon: const Icon(
-                      Icons.person,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  onChanged: (value) {
-                    setState(() {
-                      username = value;
-                    });
-                  },
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
-                child: TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: 'Password',
-                    hintStyle: Standards.fontStyles["subtitle"],
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(
-                          Standards.bounds["borderRadius"]!),
-                    ),
-                    prefixIcon: const Icon(
-                      Icons.lock,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  onChanged: (value) {
-                    setState(() {
-                      password = value;
-                    });
-                  },
-                ),
-              ),
-              // Forgot password
-              Container(
-                margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
-                child: TextButton(
-                  onPressed: () {
-                    // TODO: implement forgot password
-                    print("Forgot Password Button Pressed {Login}");
-                  },
-                  child: Text(
-                    'Forgot your password?',
-                    style: Standards.fontStyles["subtitle"],
-                  ),
-                ),
-              ),
-              Expanded(child: Container()),
-              Container(
-                margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
+            ),
+            // Space between
+            Container(
+              height: 10,
+            ),
+
+            // Username
+            reusableTextField(
+                "Enter UserName", Icons.person, false, _emailTextController),
+            // Space between
+            const SizedBox(
+              height: 20,
+            ),
+            // Password
+            reusableTextField(
+                "Enter Password", Icons.lock, true, _passwordTextController),
+            // Space between
+            const SizedBox(
+              height: 20,
+            ),
+            // Forgot passwor
+            forgetPassword(context),
+
+            // Space between
+
+            Container(
+              margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
+              // Rounded button
+              child: ElevatedButton(
                 // Rounded button
-                child: ElevatedButton(
-                  // Rounded button
-                  style: ElevatedButton.styleFrom(
-                    primary: Standards.colors["primaryColorDark"],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(
-                          Standards.bounds["borderRadius"]!),
-                    ),
+                style: ElevatedButton.styleFrom(
+                  primary: Standards.colors["primaryColorDark"],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        Standards.bounds["borderRadius"]!),
                   ),
-                  // Text with icon
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.login_rounded,
-                        color: Standards.colors["whiteColor"],
-                      ),
-                      VerticalDivider(
-                        color: Standards.colors["whiteColor"],
-                        width: 10,
-                      ),
-                      Text(
-                        'Login',
-                        style: Standards.fontStyles["mainButtonWhite"],
-                      ),
-                    ],
-                  ),
-                  onPressed: () {
-                    setState(
-                      () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => BMI(),
-                            ));
-                      },
-                    );
-                  },
                 ),
-              ),
-              // Divider with text
-              Container(
-                  margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
-                  child: Row(children: const <Widget>[
-                    Expanded(child: Divider()),
-                    Text('Or'),
-                    Expanded(child: Divider()),
-                  ])),
-              // Facebook and Google Icon button
-              Container(
-                margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
+                // Text with icon
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    IconButton(
-                      icon: const FaIcon(
-                        FontAwesomeIcons.facebookSquare,
-                        color: Colors.blue,
-                      ),
-                      onPressed: () {
-                        // TODO: implement facebook login
-                        print('Facebook Login Button Pressed');
-                      },
+                    Icon(
+                      Icons.login_rounded,
+                      color: Standards.colors["whiteColor"],
                     ),
-                    IconButton(
-                      icon: const FaIcon(
-                        FontAwesomeIcons.googlePlusSquare,
-                        color: Colors.red,
-                      ),
-                      onPressed: () {
-                        // TODO: implement google login
-                        print('Google Login Button Pressed');
-                      },
+                    VerticalDivider(
+                      color: Standards.colors["whiteColor"],
+                      width: 10,
+                    ),
+                    Text(
+                      'Login',
+                      style: Standards.fontStyles["mainButtonWhite"],
                     ),
                   ],
                 ),
+                onPressed: () {
+                  FirebaseAuth.instance
+                      .signInWithEmailAndPassword(
+                          email: _emailTextController.text,
+                          password: _passwordTextController.text)
+                      .then((value) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => BMI()));
+                  }).onError((error, stackTrace) {
+                    print("Error ${error.toString()}");
+                  });
+                },
               ),
-            ],
-          ),
+            ),
+            Container(
+                margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
+                child: Row(children: const <Widget>[
+                  Expanded(child: Divider()),
+                  Text('Or'),
+                  Expanded(child: Divider()),
+                ])),
+            Container(
+              // margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    icon: const FaIcon(
+                      FontAwesomeIcons.facebookSquare,
+                      color: Colors.blue,
+                    ),
+                    onPressed: () {
+                      // TODO: implement facebook login
+                      print('Facebook Login Button Pressed');
+                    },
+                  ),
+                  IconButton(
+                    icon: const FaIcon(
+                      FontAwesomeIcons.googlePlusSquare,
+                      color: Colors.red,
+                    ),
+                    onPressed: () {
+                      // TODO: implement google login
+                      print('Google Login Button Pressed');
+                    },
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              height: 5,
+            ),
+            RichText(
+              text: TextSpan(
+                text: "Don't have an account? ",
+                style: Standards.fontStyles["subtitle"],
+                children: [
+                  TextSpan(
+                    text: 'Create Account',
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignUp(),
+                            ));
+                      },
+                    style: TextStyle(
+                      color: Colors.blue,
+                    ),
+                  ),
+                ],
+              ),
+              textAlign: TextAlign.center,
+            ),
+            Container(
+              height: 10,
+            ),
+            // Button
+            // Button(context, "Login", () {
+            //   FirebaseAuth.instance
+            //       .signInWithEmailAndPassword(
+            //           email: _emailTextController.text,
+            //           password: _passwordTextController.text)
+            //       .then((value) {
+            //     Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //             builder: (context) => HomeScreen()));
+            //   }).onError((error, stackTrace) {
+            //     print("Error ${error.toString()}");
+            //   });
+            // }),
+            // Space between
+          ])),
         ),
+      ),
+    );
+  }
+
+  Widget forgetPassword(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: 35,
+      alignment: Alignment.bottomRight,
+      child: TextButton(
+        child: const Text(
+          "Forgot Password?",
+          style: TextStyle(color: Colors.black),
+          textAlign: TextAlign.right,
+        ),
+        onPressed: () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => ResetPassword())),
       ),
     );
   }

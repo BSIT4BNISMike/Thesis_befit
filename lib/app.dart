@@ -9,9 +9,9 @@ class BeFit extends StatelessWidget {
     return MaterialApp(
       title: 'BeFit',
       theme: _BeFitTheme,
-      initialRoute: '/test',
+      initialRoute: '/setup',
       routes: {
-        '/test': (context) => Splash(),
+        // '/test': (context) => Splash(),
         '/setup': (context) => Splash(),
       },
     );

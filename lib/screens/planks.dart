@@ -213,7 +213,8 @@ class _PlanksState extends State<Planks> {
                           ],
                         ),
                         onPressed: () async {
-                          await uploadFile();
+                          var exercise = "Planks";
+                          await uploadFile(exercise);
                         },
                       ),
                     ),
