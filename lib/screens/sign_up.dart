@@ -75,6 +75,7 @@ class _SignUpState extends State<SignUp> {
                   height: 20,
                 ),
 
+                // Birth date
                 TextField(
                   controller: textareaDOB,
                   decoration: InputDecoration(
@@ -100,13 +101,17 @@ class _SignUpState extends State<SignUp> {
                 const SizedBox(
                   height: 20,
                 ),
+
                 // Space Password
                 reusableTextField(
                     "Password", Icons.lock, true, _passwordTextController),
+
                 // Space between
                 const SizedBox(
                   height: 20,
                 ),
+
+                // Terms and condition
                 Container(
                   // margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
                   child: CheckboxListTile(
@@ -122,6 +127,8 @@ class _SignUpState extends State<SignUp> {
                     },
                   ),
                 ),
+
+                // Button
                 Container(
                   margin: EdgeInsets.only(top: Standards.bounds["margin"]!),
                   // Rounded button
