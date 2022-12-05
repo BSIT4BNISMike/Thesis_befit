@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:tflite/tflite.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:befit/standards.dart';
@@ -51,10 +52,14 @@ class _ImageProcessingState extends State<ImageProcessing> {
 
   loadModel() async {
     //this function loads our model
-    await Tflite.loadModel(
-      model: 'assets/model_unquant.tflite',
-      labels: 'assets/labels.txt',
-    );
+    try {
+      await Tflite.loadModel(
+        model: 'assets/model_unquant.tflite',
+        labels: 'assets/labels.txt',
+      );
+    } on PlatformException {
+      print("Failed to load the model");
+    }
   }
 
 // permission to camera

@@ -20,26 +20,25 @@ class _PanelState extends State<Panel> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-        icon: Icon(
-          Icons.arrow_back,
-          color: Standards.colors["blackColor"],
+          icon: Icon(
+            Icons.arrow_back,
+            color: Standards.colors["blackColor"],
+          ),
+          // TODO: Implement Back Button
+          // Tapping Back Button will return to the ROUTES TESTER (temporary)
+          onPressed: () {
+            setState(
+              () {
+                Navigator.pop(context);
+              },
+            );
+          },
         ),
-        // TODO: Implement Back Button
-        // Tapping Back Button will return to the ROUTES TESTER (temporary)
-        onPressed: () {
-          setState(
-                () {
-              Navigator.pop(context);
-            },
-          );
-        },
-      ),
-
-
         title: Text(
           'Health Checklist',
           style: Standards.fontStyles["main"],
-        ),),
+        ),
+      ),
       body: Container(
         child: const Center(child: Text("HELLO")),
       ),
