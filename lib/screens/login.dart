@@ -1,4 +1,4 @@
-import 'package:befit/screens/bmi_calculator.dart';
+import 'package:befit/screens/HomeProfile.dart';
 import 'package:befit/screens/sign_up.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
@@ -16,8 +16,15 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  TextEditingController _passwordTextController = TextEditingController();
-  TextEditingController _emailTextController = TextEditingController();
+  final _passwordTextController = TextEditingController();
+  final _emailTextController = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailTextController.dispose();
+    _passwordTextController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,14 +61,14 @@ class _LoginState extends State<Login> {
 
             // Username
             reusableTextField(
-                "Enter UserName", Icons.person, false, _emailTextController),
+                "Username", Icons.person, false, _emailTextController),
             // Space between
             const SizedBox(
               height: 20,
             ),
             // Password
             reusableTextField(
-                "Enter Password", Icons.lock, true, _passwordTextController),
+                "Password", Icons.lock, true, _passwordTextController),
             // Space between
             const SizedBox(
               height: 20,
@@ -101,17 +108,24 @@ class _LoginState extends State<Login> {
                     ),
                   ],
                 ),
-                onPressed: () {
-                  FirebaseAuth.instance
-                      .signInWithEmailAndPassword(
-                          email: _emailTextController.text,
-                          password: _passwordTextController.text)
-                      .then((value) {
+                onPressed: () async {
+                  try {
+                    await FirebaseAuth.instance.signInWithEmailAndPassword(
+                        email: _emailTextController.text,
+                        password: _passwordTextController.text);
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => BMI()));
-                  }).onError((error, stackTrace) {
-                    print("Error ${error.toString()}");
-                  });
+                        MaterialPageRoute(builder: (context) => HomeA1()));
+                  } on FirebaseAuthException catch (e) {
+                    print(e);
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            content: Text(
+                                'Error! No Account found. Please check username and password'),
+                          );
+                        });
+                  }
                 },
               ),
             ),

@@ -4,9 +4,14 @@ import 'package:befit/screens/splash.dart';
 import 'package:befit/standards.dart';
 
 class BeFit extends StatelessWidget {
+  // Additional
+  const BeFit({Key? key}) : super(key: key);
   @override
+
   Widget build(BuildContext context) {
     return MaterialApp(
+      // Additional
+      debugShowCheckedModeBanner: false,
       title: 'BeFit',
       theme: _BeFitTheme,
       initialRoute: '/setup',

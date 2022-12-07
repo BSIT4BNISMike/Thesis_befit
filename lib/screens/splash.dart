@@ -1,4 +1,4 @@
-import 'package:befit/screens/login.dart';
+import 'package:befit/screens/MainPage.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -70,7 +70,7 @@ class _SplashState extends State<Splash> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Login(),
+                    builder: (context) => MainPage(),
                   ),
                 );
               },

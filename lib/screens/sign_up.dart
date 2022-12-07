@@ -1,3 +1,4 @@
+import 'package:befit/screens/bmi_calculator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/reusable widget/reusable_widgets.dart';
@@ -14,12 +15,21 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  TextEditingController _passwordTextController = TextEditingController();
-  TextEditingController _emailTextController = TextEditingController();
-  TextEditingController _userNameTextController = TextEditingController();
-  TextEditingController textareaDOB = TextEditingController();
+  final _passwordTextController = TextEditingController();
+  final _confirmpasswordTextController = TextEditingController();
+  final _emailTextController = TextEditingController();
+  final _userNameTextController = TextEditingController();
+  final textareaDOB = TextEditingController();
   DateTime currentDate = DateTime.now();
   bool terms = false;
+
+  bool passwordConfirmed() {
+    if (_passwordTextController.text == _confirmpasswordTextController.text) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? pickedDate = await showDatePicker(
@@ -105,6 +115,13 @@ class _SignUpState extends State<SignUp> {
                 // Space Password
                 reusableTextField(
                     "Password", Icons.lock, true, _passwordTextController),
+                const SizedBox(
+                  height: 20,
+                ),
+
+                // Space Password
+                reusableTextField("Confirm Password", Icons.lock, true,
+                    _confirmpasswordTextController),
 
                 // Space between
                 const SizedBox(
@@ -152,18 +169,28 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ],
                     ),
-                    onPressed: () {
-                      FirebaseAuth.instance
-                          .createUserWithEmailAndPassword(
-                              email: _emailTextController.text,
-                              password: _passwordTextController.text)
-                          .then((value) {
-                        print("Created New Account");
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Login()));
-                      }).onError((error, stackTrace) {
-                        print("Error ${error.toString()}");
-                      });
+                    onPressed: () async {
+                      try {
+                        if (passwordConfirmed()) {
+                          await FirebaseAuth.instance
+                              .createUserWithEmailAndPassword(
+                                  email: _emailTextController.text,
+                                  password: _passwordTextController.text);
+                          print("Created New Account");
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => BMI()));
+                          // Other info
+                        }
+                      } on FirebaseAuthException catch (e) {
+                        print(e);
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                content: Text(e.message.toString()),
+                              );
+                            });
+                      }
                     },
                   ),
                 ),
