@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
+import 'package:gif_view/gif_view.dart';
 
 class WallSquats extends StatefulWidget {
   @override
@@ -76,14 +77,10 @@ class _WallSquatsState extends State<WallSquats> {
                   children: [
                     Row(
                       children: [
-                        Container(
+                        GifView.asset(
+                          'assets/images/WallSquats.gif',
                           height: 300,
                           width: 330,
-                          child: Image(
-                            image: NetworkImage(
-                              'https://i.pinimg.com/originals/e3/cd/dd/e3cddd24e8ac71253cf9c05e3e3dffa9.gif',
-                            ),
-                          ),
                         ),
                       ],
                     ),

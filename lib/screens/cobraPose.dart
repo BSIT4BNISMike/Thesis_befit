@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
+import 'package:gif_view/gif_view.dart';
 
 class CobraPose extends StatefulWidget {
   @override
@@ -76,14 +77,10 @@ class _CobraPoseState extends State<CobraPose> {
                   children: [
                     Row(
                       children: [
-                        Container(
+                        GifView.asset(
+                          'assets/images/CobraPose.gif',
                           height: 300,
                           width: 330,
-                          child: Image(
-                            image: NetworkImage(
-                              'https://twentyfourlife.wpenginepowered.com/wp-content/uploads/2019/11/Cobra-Pose.gif',
-                            ),
-                          ),
                         ),
                       ],
                     ),
@@ -93,15 +90,6 @@ class _CobraPoseState extends State<CobraPose> {
                           child: Text(
                             'NOTE: Please be sure to record yourself doing this workout with your left side part is seen in the camera.',
                             style: Standards.fontStyles["subtitle"],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            '',
                           ),
                         ),
                       ],

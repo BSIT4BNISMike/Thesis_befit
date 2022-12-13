@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
+import 'package:gif_view/gif_view.dart';
 
 class MountainClimbers extends StatefulWidget {
   @override
@@ -76,14 +77,10 @@ class _MountainClimbersState extends State<MountainClimbers> {
                   children: [
                     Row(
                       children: [
-                        Container(
+                        GifView.asset(
+                          'assets/images/mountainclimbers.gif',
                           height: 300,
                           width: 330,
-                          child: Image(
-                            image: NetworkImage(
-                              'https://i0.wp.com/post.healthline.com/wp-content/uploads/2022/01/400x400_9_Best_Bodyweight_Shoulder_Exercises_for_Every_Body_Mountain_Climbers-1.gif?h=840',
-                            ),
-                          ),
                         ),
                       ],
                     ),

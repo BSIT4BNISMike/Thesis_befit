@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
+import 'package:gif_view/gif_view.dart';
 
 class BicycleCrunch extends StatefulWidget {
   @override
@@ -76,14 +77,10 @@ class _BicycleCrunchState extends State<BicycleCrunch> {
                   children: [
                     Row(
                       children: [
-                        Container(
+                        GifView.asset(
+                          'assets/images/bicyclecrunch.gif',
                           height: 300,
                           width: 330,
-                          child: Image(
-                            image: NetworkImage(
-                              'https://twentyfourlife.wpenginepowered.com/wp-content/uploads/2019/06/Bicycle-Crunch.gif',
-                            ),
-                          ),
                         ),
                       ],
                     ),

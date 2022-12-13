@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
+import 'package:gif_view/gif_view.dart';
 
 class TricepDips extends StatefulWidget {
   @override
@@ -76,14 +77,10 @@ class _TricepDipsState extends State<TricepDips> {
                   children: [
                     Row(
                       children: [
-                        Container(
+                        GifView.asset(
+                          'assets/images/Tricepdips.gif',
                           height: 300,
                           width: 330,
-                          child: Image(
-                            image: NetworkImage(
-                              'https://flabfix.com/wp-content/uploads/2019/05/Triceps-Dips.gif',
-                            ),
-                          ),
                         ),
                       ],
                     ),

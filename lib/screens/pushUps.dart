@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
+import 'package:gif_view/gif_view.dart';
 
 class PushUps extends StatefulWidget {
   @override
@@ -76,14 +77,10 @@ class _PushUpsState extends State<PushUps> {
                   children: [
                     Row(
                       children: [
-                        Container(
+                        GifView.asset(
+                          'assets/images/Pushups.gif',
                           height: 300,
                           width: 330,
-                          child: Image(
-                            image: NetworkImage(
-                              'https://i.pinimg.com/originals/4d/07/7b/4d077bdda83fd32c4105ccd807b445c2.gif',
-                            ),
-                          ),
                         ),
                       ],
                     ),

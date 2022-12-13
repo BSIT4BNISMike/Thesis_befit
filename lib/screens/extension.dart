@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
+import 'package:gif_view/gif_view.dart';
 
 class Extension extends StatefulWidget {
   @override
@@ -76,14 +77,10 @@ class _ExtensionState extends State<Extension> {
                   children: [
                     Row(
                       children: [
-                        Container(
+                        GifView.asset(
+                          'assets/images/Extension.gif',
                           height: 300,
                           width: 330,
-                          child: Image(
-                            image: NetworkImage(
-                              'https://www.healthier.qld.gov.au/wp-content/uploads/2015/07/02_M_WIP02.gif',
-                            ),
-                          ),
                         ),
                       ],
                     ),

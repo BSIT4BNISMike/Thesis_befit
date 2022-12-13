@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:befit/standards.dart';
+import 'package:gif_view/gif_view.dart';
 
 class RussianTwist extends StatefulWidget {
   @override
@@ -76,14 +77,10 @@ class _RussianTwistState extends State<RussianTwist> {
                   children: [
                     Row(
                       children: [
-                        Container(
+                        GifView.asset(
+                          'assets/images/RussianTwist.gif',
                           height: 300,
                           width: 330,
-                          child: Image(
-                            image: NetworkImage(
-                              'https://i.pinimg.com/originals/6a/6e/62/6a6e62d7d7ee38f608dda828e4d4ea11.gif',
-                            ),
-                          ),
                         ),
                       ],
                     ),
