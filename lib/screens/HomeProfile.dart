@@ -74,39 +74,39 @@ class _HomeA1State extends State<HomeA1> {
                     ],
                   ),
                 ),
-                Divider(
-                    height: 18,
-                    thickness: 5,
-                    color: Standards.colors["primaryColorLight"]),
+                // Divider(
+                //     height: 18,
+                //     thickness: 5,
+                //     color: Standards.colors["primaryColorLight"]),
 
                 // Profile picture
-                Container(
-                  width: 200,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 204, 144, 236),
-                        Color.fromARGB(255, 153, 110, 180),
-                      ],
-                    ),
-                    borderRadius: BorderRadius.circular(100),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        width: 110,
-                        height: 80,
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Profile Picture',
-                          style: Standards.fontStyles["mainButtonWhite"],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // Container(
+                //   width: 200,
+                //   height: 200,
+                //   decoration: BoxDecoration(
+                //     gradient: const LinearGradient(
+                //       colors: [
+                //         Color.fromARGB(255, 204, 144, 236),
+                //         Color.fromARGB(255, 153, 110, 180),
+                //       ],
+                //     ),
+                //     borderRadius: BorderRadius.circular(100),
+                //   ),
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //     children: [
+                //       Container(
+                //         width: 110,
+                //         height: 80,
+                //         alignment: Alignment.center,
+                //         child: Text(
+                //           'Profile Picture',
+                //           style: Standards.fontStyles["mainButtonWhite"],
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
                 Divider(
                     height: 18,
                     thickness: 5,
